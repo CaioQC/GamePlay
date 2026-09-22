@@ -49,10 +49,21 @@ export const GRADIENTS = {
  */
 export const FONTS = {
   title700: 'Rajdhani_700Bold',
-  title600: 'Rajdhani_600SemiBold',
   title500: 'Rajdhani_500Medium',
   text400: 'Inter_400Regular',
   text500: 'Inter_500Medium',
+};
+
+/**
+ * Os dois estilos de texto que se repetem pelo app inteiro. Sem eles o
+ * mesmo trio familia/tamanho/cor era reescrito 13 vezes.
+ * Para variar algo pontual, combine num array: [TEXT.title18, styles.x].
+ */
+export const TEXT = {
+  // "Partidas agendadas", "Jogadores", nome do jogador, rotulos do formulario
+  title18: { fontFamily: FONTS.title700, fontSize: 18, color: COLORS.heading },
+  // "Total 6", data, categoria, status, "Max 100 caracteres"
+  meta13: { fontFamily: FONTS.text400, fontSize: 13, color: COLORS.text },
 };
 
 /** Medidas tiradas do prototipo (px @3x / 3). */
@@ -66,7 +77,4 @@ export const METRICS = {
   category: { width: 104, height: 120 },  // 312x360, gap de 8pt
   smallInput: 48,      // 144px - dia/mes e hora/minuto
   textAreaHeight: 95,  // 285px
-  bannerHeight: 228,   // 685px
 };
-
-export default { COLORS, GRADIENTS, FONTS, METRICS };
